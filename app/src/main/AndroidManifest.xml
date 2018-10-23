@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.johnhellbom.dysseappen">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".DysseAppenApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="DysseAppen"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data android:name="com.onesignal.NotificationOpened.DEFAULT" android:value="DISABLE" />
+
+        <receiver android:name=".PeriodicTaskReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_LOW" />
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+                <action android:name="com.johnhellbom.dysseappen.PERIODIC_TASK_HEART_BEAT" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".BootAndUpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".BackgroundService" />
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DyssePodden"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_dyssepodden"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SmartaTips"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_smartatips"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Dyssa"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_dyssa"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Verktyg"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_verktyg"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Playback"
+            android:screenOrientation="portrait"
+            android:label=""
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SmartaTipsPlayback"
+            android:configChanges="orientation|screenSize"
+            android:label=""
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DyssaQuestion"
+            android:screenOrientation="portrait"
+            android:label="Aktuell fråga"
+            android:noHistory="true"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DyssaAllQuestions"
+            android:screenOrientation="portrait"
+            android:label="Alla frågor"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DyssaAsk"
+            android:screenOrientation="portrait"
+            android:label="Dyssa"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DyssaResult"
+            android:screenOrientation="portrait"
+            android:label="Dyssa"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".News"
+            android:screenOrientation="portrait"
+            android:label=""
+            android:theme="@style/AppTheme" />
+    </application>
+
+
+</manifest>

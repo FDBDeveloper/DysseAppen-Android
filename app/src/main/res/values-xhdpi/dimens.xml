@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="menuitem_fontsize">32sp</dimen>
+    <dimen name="button_fontsize">25sp</dimen>
+</resources>

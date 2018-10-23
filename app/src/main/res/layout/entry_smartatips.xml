@@ -1,0 +1,75 @@
+<!-- entry_carousel.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/tipsgradient_1"
+        android:elevation="4dp"
+        android:layout_margin="20dp"
+        android:id="@+id/tips_wrapper">
+
+        <me.grantland.widget.AutofitTextView tools:ignore="MissingPrefix"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:maxLines="2"
+            autofit:minTextSize="16sp"
+            fontPath="fonts/CenturyGothic-Bold.ttf"
+            android:id="@+id/tips_title"
+            android:layout_margin="20dp"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            android:layout_weight="0.75"
+            android:gravity="center_vertical"
+            android:textIsSelectable="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/tips_thumb"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/tips_background_description" />
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:id="@+id/tips_play"
+                android:background="@drawable/play_button"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/tips_playbutton_description" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.75">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/tips_pattern"
+                android:alpha="0.15"
+                android:src="@drawable/pattern"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/tips_pattern_description" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

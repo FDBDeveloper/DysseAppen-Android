@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.johnhellbom.dysseappen.SmartaTips"
+    android:background="@drawable/smartatips_bg">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/smartatips_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:background="#222222"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/smartatips_toolbar">
+
+        <com.johnhellbom.dysseappen.InfiniteViewPager
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/smartatips_carousel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_weight="1" />
+
+        <com.matthewtamlin.sliding_intro_screen_library.SelectionIndicator tools:ignore="MissingPrefix"
+            android:id="@+id/smartatips_pagination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:numberOfItems="3"
+            app:activeItemIndex="0"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="0dp"
+            android:paddingBottom="25dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="0dp"
+            android:paddingRight="20dp">
+
+
+            <com.johnhellbom.dysseappen.OffsetButton tools:ignore="MissingPrefix"
+                style="?android:attr/borderlessButtonStyle"
+                fontPath="fonts/CenturyGothic-Bold.ttf"
+                android:layout_width="fill_parent"
+                android:text="@string/tips_startbutton_text"
+                android:layout_height="50dp"
+                android:id="@+id/tips_startbutton"
+                android:textAllCaps="false"
+                android:textSize="@dimen/button_fontsize"
+                android:background="@drawable/purple_button_selector"
+                android:gravity="center" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

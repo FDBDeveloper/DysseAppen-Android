@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="menuitem_fontsize">28sp</dimen>
+    <dimen name="button_fontsize">23sp</dimen>
+    <item name="entrypage_textmultiplier" format="float" type="dimen">0.8</item>
+</resources>

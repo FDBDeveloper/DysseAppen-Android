@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dTitle"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:typeface="sans"
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+
+    <NumberPicker
+        android:id="@+id/np"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="64dp"
+        android:layout_gravity="center|left"
+        android:layout_weight="1"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp">
+
+        <Button
+            android:id="@+id/np_cancelbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/np"
+            android:layout_toRightOf="@+id/np"
+            android:text="Ångra"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="20dp" />
+
+        <Button
+            android:id="@+id/np_okbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/np_cancelbutton"
+            android:layout_alignBottom="@+id/np_cancelbutton"
+            android:layout_toLeftOf="@+id/np"
+            android:text="Välj"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<!-- entry_carousel.xml -->
+<!--suppress ALL -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/carouselImage"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/entrypage_carousel_background_description" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_centerInParent="true"
+        android:paddingBottom="20dp"
+        android:baselineAligned="false"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/carouselCategory"
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/CenturyGothic.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:paddingBottom="0dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="0dp"
+            android:paddingRight="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:textIsSelectable="false" />
+
+        <TextView tools:ignore="MissingPrefix"
+            fontPath="fonts/CenturyGothic-Bold.ttf"
+            android:id="@+id/carouselTitle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textColor="#ffd83b"
+            android:textSize="28sp"
+            android:paddingLeft="16dp"
+            android:paddingTop="0dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="0.50"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/carouselDescription"
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/CenturyGothic.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="19sp"
+            android:paddingLeft="16dp"
+            android:paddingTop="0dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:textIsSelectable="false" />
+
+    </LinearLayout>
+
+</RelativeLayout>

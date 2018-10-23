@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.johnhellbom.dysseappen.Dyssa"
+    android:background="@drawable/dyssa_bg">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/dyssa_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:background="#222222"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dyssa_toolbar">
+
+        <TextView
+            fontPath="fonts/CenturyGothic-Bold.ttf"
+            tools:ignore="MissingPrefix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dyssa_who_header_text"
+            android:id="@+id/dyssa_who_header"
+            android:textSize="24sp"
+            android:textIsSelectable="true"
+            android:textColor="#a3f0ff"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/round_shape"
+            android:id="@+id/dyssa_age_drop">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/dyssa_age_icon"
+                android:src="@drawable/ageicon"
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginLeft="8dp"
+                android:contentDescription="@string/dyssa_age_icon_description" />
+
+            <TextView tools:ignore="MissingPrefix"
+                fontPath="fonts/CenturyGothic.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/dyssa_age_drop_text"
+                android:id="@+id/dyssa_age_drop_text"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:allowUndo="false"
+                android:layout_weight="1"
+                android:textIsSelectable="false" />
+
+            <ImageView
+                android:layout_width="15sp"
+                android:layout_height="15sp"
+                android:id="@+id/dyssa_age_droparrow"
+                android:src="@drawable/downarrow"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="8dp"
+                android:contentDescription="@string/dyssa_age_droparrow_description" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/round_shape"
+            android:layout_marginTop="14dp"
+            android:id="@+id/dyssa_gen_drop">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/dyssa_gen_icon"
+                android:src="@drawable/genicon"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/dyssa_gen_icon_description" />
+
+            <TextView
+                fontPath="fonts/CenturyGothic.ttf"
+                tools:ignore="MissingPrefix"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/dyssa_gen_drop_text"
+                android:id="@+id/dyssa_gendrop_text"
+                android:textColor="#000000"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:textIsSelectable="false" />
+
+            <ImageView
+                android:layout_width="15sp"
+                android:layout_height="15sp"
+                android:id="@+id/dyssa_gen_droparrow"
+                android:src="@drawable/downarrow"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/dyssa_gen_droparrow_text" />
+        </LinearLayout>
+
+        <com.johnhellbom.dysseappen.OffsetButton tools:ignore="MissingPrefix"
+            style="?android:attr/borderlessButtonStyle"
+            fontPath="fonts/CenturyGothic-Bold.ttf"
+            android:layout_width="fill_parent"
+            android:text="@string/dyssa_currentbutton_text"
+            android:layout_height="50dp"
+            android:id="@+id/dyssa_question_button"
+            android:textAllCaps="false"
+            android:textSize="22sp"
+            android:background="@drawable/turc_button_selector"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="22dp" />
+
+        <com.johnhellbom.dysseappen.OffsetButton tools:ignore="MissingPrefix"
+            style="?android:attr/borderlessButtonStyle"
+            fontPath="fonts/CenturyGothic-Bold.ttf"
+            android:layout_width="fill_parent"
+            android:text="@string/dyssa_all_button_text"
+            android:layout_height="50dp"
+            android:id="@+id/dyssa_all_button"
+            android:textAllCaps="false"
+            android:textSize="22sp"
+            android:background="@drawable/green_button_selector"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" />
+
+        <com.johnhellbom.dysseappen.OffsetButton tools:ignore="MissingPrefix"
+            style="?android:attr/borderlessButtonStyle"
+            fontPath="fonts/CenturyGothic-Bold.ttf"
+            android:layout_width="fill_parent"
+            android:text="@string/dyssa_suggest_button_text"
+            android:layout_height="50dp"
+            android:id="@+id/dyssa_suggest_button"
+            android:textAllCaps="false"
+            android:textSize="22sp"
+            android:background="@drawable/pink_button_selector"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

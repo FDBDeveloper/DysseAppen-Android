@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:EMVideoView="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.johnhellbom.dysseappen.SmartaTipsPlayback"
+    android:orientation="vertical"
+    android:id="@+id/tips_background">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tips_playback_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <com.devbrackets.android.exomedia.EMVideoView
+        android:id="@+id/tips_playback_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        EMVideoView:defaultControlsEnabled="true"
+        android:layout_weight="0.6" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:background="#20ffffff"
+        android:backgroundTint="#ffffff"
+        android:backgroundTintMode="multiply">
+
+        <TextView tools:ignore="MissingPrefix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/smartatips_list_title"
+            fontPath="fonts/CenturyGothic-Bold.ttf"
+            android:id="@+id/textView"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:layout_gravity="center_vertical"
+            android:textColor="#fff"
+            android:textIsSelectable="true" />
+
+        <TextView tools:ignore="MissingPrefix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tips_share_title"
+            fontPath="fonts/CenturyGothic-Bold.ttf"
+            android:id="@+id/tips_share_text"
+            android:layout_weight="0"
+            android:textAlignment="viewEnd"
+            android:layout_gravity="center_vertical"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.51"
+        android:id="@+id/tips_listwrapper">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tips_list"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:divider="#0fffffff"
+            android:dividerHeight="0.5dp"
+            android:drawSelectorOnTop="false"
+            android:background="#33000000" />
+
+    </LinearLayout>
+
+</LinearLayout>
